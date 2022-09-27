@@ -1,0 +1,145 @@
+:root {
+  --primary-light: #e8e8f8;
+  --primary-lightmedium: #c6c6ed;
+  --primary-medium: #605ecc;
+  --primary-dark: #382dab;
+  --primary-deepdark: #250889;
+  --secondary-color: #cc605e;
+  --secondary-dark: #ae4541;
+  --tertiary-color: #cc5eca;
+
+  --primary-font: sans-serif;
+  --secondary-font: serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  filter: brightness(.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid rgba(0, 0, 0, 30%); */
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  color: var(--primary-light);
+  background-color: var(--primary-medium);
+  text-align: left;
+  position: relative;
+}
+
+.wrapper {
+  padding: 3rem 1.5rem 1.5rem;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container {
+  width: 550px;
+  display: grid;
+  grid-gap: .5rem;
+}
+
+.header {}
+
+.header>h1 {
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  text-align: center;
+  padding: .5rem;
+}
+
+.filter {
+  display: flex;
+}
+
+.filter>input {
+  padding: .75rem;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 70%);
+  background-color: rgba(255, 255, 255, 90%);
+  transition: background-color .2s ease-in-out;
+}
+
+.filter>input::placeholder {}
+
+.filter>input:focus {
+  padding: .75rem;
+  border: 0;
+  outline: 0;
+  color: var(--primary-light);
+  background-color: rgba(255, 255, 255, 10%);
+}
+
+.filter>input:focus::placeholder {
+  color: rgba(255, 255, 255, 50%);
+}
+
+.results {
+  display: grid;
+  grid-gap: .5rem;
+}
+
+.results>p {
+  padding: .5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.list>li>span {
+  font-size: 1.25rem;
+}
+
+.list>li {
+  padding: .75rem;
+  font-size: 1rem;
+}
+
+.list>li:nth-child(1n) {
+  background-color: rgba(0, 0, 0, 5%)
+}
+
+.list>li:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 10%)
+}
+
+.footer>p {
+  padding: .75rem;
+  font-size: .8rem;
+  text-align: right;
+}
+
+.footer>p>a {
+  color: var(--primary-lightmedium)
+}
